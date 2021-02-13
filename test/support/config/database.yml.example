@@ -1,0 +1,6 @@
+---
+host: localhost
+adapter: postgresql
+database: ar_interval_test
+username:
+password: 

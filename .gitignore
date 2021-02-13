@@ -1,0 +1,11 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+test/support/config/database.yml
+tags
+Gemfile.lock
