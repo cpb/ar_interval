@@ -5,7 +5,22 @@ describe ArInterval do
     refute_nil ::ArInterval::VERSION
   end
 
+  before do
+    Occurence.destroy_all
+  end
+
   it "has Occurence test model configured" do
     assert Occurence.count == 0
+  end
+
+  describe "one occurence" do
+    before do
+      Occurence.create(
+        start_time: DateTime.new(2021,2,12,12,02),
+        interval: "P1DT3H18M",
+      )
+    end
+
+    it { _(Occurence.count) == 1 }
   end
 end
