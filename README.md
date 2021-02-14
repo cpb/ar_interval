@@ -1,8 +1,4 @@
-# ArInterval
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ar_interval`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Support for Postgres Interval Types for ActiveRecord. Currently in [Prerelease](#prerelease)
 
 ## Installation
 
@@ -22,7 +18,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Standalone ActiveRecord
+
+```ruby
+require 'ar_interval'
+
+class Occurence < ActiveRecord::Base
+  attribute :column_name, :interval
+end
+```
+
+#### Invalid Format as a Validation error
+
+```ruby
+require 'ar_interval'
+
+class Occurence < ActiveRecord::Base
+  include ArInterval::Validations
+
+  attribute :column_name, :interval
+end
+```
+
+### Rails
+
+TODO
 
 ## Development
 
@@ -34,6 +54,21 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/cpb/ar_interval.
 
+## Roadmap
+
+### 1.0
+
+- Default behaviour for Postgres Databases
+```ruby
+create_table :table_name do |t|
+  t.interval :column_name
+end
+```
+
+### Prerelease
+
+- Manually registered `ActiveRecord::Type`
+- Optional `ActiveSupport::Concern` providing format validations for `:interval` fields
 
 ## License
 
