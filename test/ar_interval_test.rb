@@ -36,5 +36,11 @@ describe ArInterval do
     end
 
     it { _(subject.count) == 1 }
+
+    describe "records" do
+      it "all #occuring?(at)" do
+        _(subject.all? {|occurence| occurence.occuring?(at) }).must_equal true
+      end
+    end
   end
 end
