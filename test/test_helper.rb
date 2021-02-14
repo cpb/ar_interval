@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 $LOAD_PATH.unshift File.expand_path("support/models", __dir__)
 
+require "pry"
 require "ar_interval"
 
 require "active_record"
