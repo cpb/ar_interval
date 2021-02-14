@@ -8,4 +8,3 @@ module ArInterval
   # Your code goes here...
 end
 
-ActiveRecord::Type.register(:interval, ArInterval::Type)

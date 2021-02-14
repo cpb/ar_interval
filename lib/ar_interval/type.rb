@@ -7,5 +7,7 @@ module ArInterval
     def serialize(value)
       value.iso8601
     end
+
+    ActiveRecord::Type.register(:interval, self)
   end
 end
