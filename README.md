@@ -1,20 +1,10 @@
-Support for Postgres Interval Types for ActiveRecord. Currently in [Prerelease](#prerelease)
+[A more complete solution exists in Rails 6.1](https://github.com/rails/rails/commit/e5a5cc483573f41fa396779057bd83ce389640d8#diff-353f4f101b1bb04938d761b6e29c88e0f147084e9e276854a77ae5d9a9a3b2a8R30)
 
-## Installation
+-----
 
-Add this line to your application's Gemfile:
+Support for Postgres Interval Types for ActiveRecord 5.2.
 
-```ruby
-gem 'ar_interval'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install ar_interval
+Currently in [Prerelease](#prerelease)
 
 ## Usage
 
@@ -42,33 +32,7 @@ end
 
 ### Rails
 
-TODO
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/cpb/ar_interval.
-
-## Roadmap
-
-### 1.0
-
-- Default behaviour for Postgres Databases
-```ruby
-create_table :table_name do |t|
-  t.interval :column_name
-end
-```
-
-### Prerelease
-
-- Manually registered `ActiveRecord::Type`
-- Optional `ActiveSupport::Concern` providing format validations for `:interval` fields
+[See, Rails 6.1](https://github.com/rails/rails/commit/e5a5cc483573f41fa396779057bd83ce389640d8#diff-353f4f101b1bb04938d761b6e29c88e0f147084e9e276854a77ae5d9a9a3b2a8R30)
 
 ## License
 
