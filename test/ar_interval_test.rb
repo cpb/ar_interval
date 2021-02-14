@@ -43,4 +43,12 @@ describe ArInterval do
       end
     end
   end
+
+  describe "#interval=" do
+    describe "not an interval" do
+      subject { Occurence.new(interval: "P1D3H18M") }
+
+      it { _(subject).wont_be :valid? }
+    end
+  end
 end

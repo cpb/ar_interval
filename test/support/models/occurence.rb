@@ -1,4 +1,5 @@
 class Occurence < ActiveRecord::Base
+  include ArInterval::Validations
 
   attribute :interval, :interval
 
