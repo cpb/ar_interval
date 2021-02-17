@@ -10,3 +10,4 @@ test/support/config/database.yml
 tags
 Gemfile.lock
 vendor
+Brewfile.lock.json
