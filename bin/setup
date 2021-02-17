@@ -3,7 +3,12 @@ set -euo pipefail
 IFS=$'\n\t'
 set -vx
 
-brew bundle
+# # macOS
+# brew bundle
+#
+# # Debian Buster
+# sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev postgresql postgresql-contrib libpq-dev
+
 bundle install
 
 # Do any other automated setup that you need to do here
