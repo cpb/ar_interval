@@ -50,5 +50,12 @@ describe ArInterval do
 
       it { _(subject).wont_be :valid? }
     end
+
+    describe "an interval with a tricky format" do
+      subject { Occurence.new(interval: "P-2D") }
+
+      it { _(subject).must_be :valid? }
+      it { subject.save! }
+    end
   end
 end
